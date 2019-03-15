@@ -37,7 +37,7 @@
   <properties>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
     <clover.license>${user.home}/clover.license</clover.license>
-    <hadoop.version>2.7.0</hadoop.version>
+    <hadoop.version>2.7.3</hadoop.version>
     <jetty.version>6.1.26</jetty.version>
     <netty.version>3.6.2.Final</netty.version>
     <pig.version>0.13.0</pig.version>
@@ -65,16 +65,17 @@
     <connection>${scm.url}</connection>
   </scm>
 
+
   <distributionManagement>
     <repository>
-      <id>${distMgmtStagingId}</id>
-      <name>${distMgmtStagingName}</name>
-      <url>${distMgmtStagingUrl}</url>
+      <id>nexus-releases</id>
+      <name>nexus releases</name>
+      <url>http://192.168.100.110:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
-      <id>${distMgmtSnapshotsId}</id>
-      <name>${distMgmtSnapshotsName}</name>
-      <url>${distMgmtSnapshotsUrl}</url>
+      <id>nexus-snapshots</id>
+      <name>nexus snapshots</name>
+      <url>http://192.168.100.110:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
